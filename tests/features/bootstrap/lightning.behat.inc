@@ -382,7 +382,7 @@ class LightningSubContext extends DrupalSubContextBase implements DrupalSubConte
   public function assertOptionNotExists($field, $option) {
     $assert = $this->assertSession();
     $field = $assert->fieldExists($field);
-    $assert->elementExists('named', ['option', $option], $field);
+    $assert->elementNotExists('named', ['option', $option], $field);
   }
 
   /**
