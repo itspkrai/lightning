@@ -4,8 +4,8 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "c5a3759a42820c4a3c4f3fe42c763c09",
-    "content-hash": "52f707dd7a334616b2f6a424762fe6f4",
+    "hash": "441c4c6746aacd6c73a98f6db8fbb985",
+    "content-hash": "919263b6e1e142ee84600f3639165376",
     "packages": [
         {
             "name": "asm89/stack-cors",
@@ -1021,15 +1021,15 @@
         },
         {
             "name": "drupal/entity_browser",
-            "version": "8.1.0-alpha8",
+            "version": "8.1.0-alpha9",
             "source": {
                 "type": "git",
                 "url": "https://git.drupal.org/project/entity_browser.git",
-                "reference": "51bbe80e35f6e962b3ec77172e9ad61fec7163dd"
+                "reference": "8a7aeca9f32f17fb672a222bd79251a06647b2fe"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://ftp.drupal.org/files/projects/entity_browser-8.x-1.0-alpha8.zip",
+                "url": "https://ftp.drupal.org/files/projects/entity_browser-8.x-1.0-alpha9.zip",
                 "reference": null,
                 "shasum": null
             },
@@ -1077,19 +1077,19 @@
             ],
             "description": "Provide a generic entity browser/picker/selector.",
             "homepage": "http://drupal.org/project/entity_browser",
-            "time": "2016-09-01 19:44:17"
+            "time": "2016-09-14 08:29:31"
         },
         {
             "name": "drupal/entity_embed",
-            "version": "8.1.0-alpha3",
+            "version": "8.1.0-beta1",
             "source": {
                 "type": "git",
                 "url": "https://git.drupal.org/project/entity_embed.git",
-                "reference": "72a93e2d5efa7a7605f4101a15814e5b39b1c5dc"
+                "reference": "1bc7daad0acb10bfa392bbb63b06e3ec06f0021c"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://ftp.drupal.org/files/projects/entity_embed-8.x-1.0-alpha3.zip",
+                "url": "https://ftp.drupal.org/files/projects/entity_embed-8.x-1.0-beta1.zip",
                 "reference": null,
                 "shasum": null
             },
@@ -1111,7 +1111,7 @@
             ],
             "description": "Allows entities to be embedded using a text editor.",
             "homepage": "https://www.drupal.org/project/entity_embed",
-            "time": "2016-08-02 19:27:22"
+            "time": "2016-09-08 18:41:50"
         },
         {
             "name": "drupal/features",
@@ -2413,22 +2413,30 @@
         },
         {
             "name": "psr/log",
-            "version": "1.0.0",
+            "version": "1.0.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/php-fig/log.git",
-                "reference": "fe0936ee26643249e916849d48e3a51d5f5e278b"
+                "reference": "5277094ed527a1c4477177d102fe4c53551953e0"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/php-fig/log/zipball/fe0936ee26643249e916849d48e3a51d5f5e278b",
-                "reference": "fe0936ee26643249e916849d48e3a51d5f5e278b",
+                "url": "https://api.github.com/repos/php-fig/log/zipball/5277094ed527a1c4477177d102fe4c53551953e0",
+                "reference": "5277094ed527a1c4477177d102fe4c53551953e0",
                 "shasum": ""
             },
+            "require": {
+                "php": ">=5.3.0"
+            },
             "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "1.0.x-dev"
+                }
+            },
             "autoload": {
-                "psr-0": {
-                    "Psr\\Log\\": ""
+                "psr-4": {
+                    "Psr\\Log\\": "Psr/Log/"
                 }
             },
             "notification-url": "https://packagist.org/downloads/",
@@ -2442,12 +2450,13 @@
                 }
             ],
             "description": "Common interface for logging libraries",
+            "homepage": "https://github.com/php-fig/log",
             "keywords": [
                 "log",
                 "psr",
                 "psr-3"
             ],
-            "time": "2012-12-21 11:40:51"
+            "time": "2016-09-19 16:02:08"
         },
         {
             "name": "stack/builder",
@@ -4597,7 +4606,7 @@
             "dist": {
                 "type": "zip",
                 "url": "https://ftp.drupal.org/files/projects/coder-8.x-2.9.zip",
-                "reference": null,
+                "reference": "b08682bd939cf7d3ac7034bee792aa17f80e19d7",
                 "shasum": null
             },
             "require": {
@@ -4833,6 +4842,10 @@
             "extra": {
                 "branch-alias": {
                     "dev-master": "9.0.x-dev"
+                },
+                "patches_applied": {
+                    "Adding composer.json support to make-convert command": "https://github.com/drush-ops/drush/commit/ce82b946d49b09cd33da5ca84feb24a6c35f8f8e.patch",
+                    "The batch table may not exist by the time _drush_backend_batch_process() is called in 8.x-1.x": "https://github.com/drush-ops/drush/commit/c389aebb7d3e26ff0f544684d8b3ec3528107e55.diff"
                 }
             },
             "autoload": {
